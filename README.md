@@ -27,8 +27,8 @@ This package is a plugin for Express Gateway to easily add Moesif API analytics 
 
   Note, applicationId is obtained from your Moesif account, this is required.
   Other configuration options includes,
-  - `debug`: turn on debug mode for moesif.
-  - `sessionTokenHeader`: we detect sessionToken in API analytics. If we could not detect it correctly from the header, you can specific which header field you use.
+  - `debug`: turn on debug mode
+  - `sessionTokenHeader`: moesif tries to detect session token automatically. If we could not detect it correctly, you can specific which header field you use.
 
 - Add moesif policy to whitelist of your `gateway.config.yml`
 
