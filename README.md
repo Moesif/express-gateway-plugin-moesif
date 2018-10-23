@@ -2,7 +2,7 @@
 
 [Express Gateway](https://www.express-gateway.io/) is an open sourced API Gateway/Management service build on the [express](https://expressjs.com/) framework.
 
-[Moesif](https://www.moesif.com) is the most advanced [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [debugging](https://www.moesif.com/features/api-debugging) platform.
+[Moesif](https://www.moesif.com) is the most advanced [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [debugging](https://www.moesif.com/features/api-debugging) platform. Moesif is used by thousands of developers to process billions of APIs calls.
 
 This package is a plugin for Express Gateway to easily add Moesif API analytics to your APIs serviced by Express Gateway.
 
