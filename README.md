@@ -1,21 +1,21 @@
 # Moesif Plugin for Express Gateway
 
-[Express Gateway](https://www.express-gateway.io/) is an open sourced API Gateway/Management service build on the [express](https://expressjs.com/) framework.
+[Express Gateway](https://www.express-gateway.io/) is an open-source API Gateway/API Management applicance built on the Node.js [express](https://expressjs.com/) framework.
 
 [Moesif](https://www.moesif.com) is the most advanced [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [debugging](https://www.moesif.com/features/api-debugging) platform. Moesif is used by thousands of developers to process billions of APIs calls.
 
-This package is a plugin for Express Gateway to easily add Moesif API analytics to your APIs serviced by Express Gateway.
+This package is a plugin for Express Gateway to easily add Moesif's API analytics to your APIs served by Express Gateway.
 
-## Setup Instructions
+## How to install
 
-- Follow [instructions for set up Express Gateway](https://www.express-gateway.io/getting-started/)
+- Follow [instructions for setting up Express Gateway](https://www.express-gateway.io/getting-started/)
 
 - Install express-gateway-plugin-moesif:
   Within the folder of the Gateway created by Express Gateway, type in:
   ```bash
   npm install --save express-gateway-plugin-moesif
   ```
-- Add moesif plugin to `system.config.yml`
+- Add the moesif plugin to `system.config.yml`
 
   ```yml
   plugins:
@@ -25,10 +25,11 @@ This package is a plugin for Express Gateway to easily add Moesif API analytics 
       applicationId: your_moesif_application_id
   ```
 
-  Note, applicationId is obtained from your Moesif account, this is required.
+  Note, `your_moesif_application_id` is obtained from your Moesif account and is required to authenticate your app with Moesif.
+  
   Other configuration options includes,
-  - `debug`: turn on debug mode
-  - `sessionTokenHeader`: moesif tries to detect session token automatically. If we could not detect it correctly, you can specific which header field you use.
+  - `debug`: turn on debug messages
+  - `sessionTokenHeader`: Set the HTTP header key that contains your API's Authorization token/API key. Moesif tries to detect sessions automatically. However, if we cannot detect it correctly, you can specify which header field to use.
 
 - Add moesif policy to whitelist of your `gateway.config.yml`
 
@@ -60,8 +61,8 @@ To capture all data for a pipeline, please make sure to put Moesif at the top of
 
 ## Additional Info:
 
-This plugin is just a simple wrapper around [moesif-express](https://www.moesif.com/docs/server-integration/express/) middleware.
+This plugin is a simple wrapper around the [moesif-express](https://www.moesif.com/docs/server-integration/express/) middleware.
 
-Because Express Gateway's configuration is designed to be declarative, so some of the functional driven options for moesif-express isn't ported over. We'll do so at future.
+Since Express Gateway's configuration is designed to be declarative, some of the options from moesif-express that require a function are not ported over. We'll do so at future.
 
-If you need to use addition options, the best way to to fork this repo and just add the additional options you need to `middlewareCreator.js` file.
+If you need to use additional options, the easiest way is to fork this repo and  add your required options to the `middlewareCreator.js` file.
