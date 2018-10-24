@@ -15,7 +15,7 @@ module.exports = function(pluginContext) {
   }
 
   if (!applicationId) {
-    throw new Error('moesif plugin requires application Id to be defined');
+    throw new Error('moesif plugin requires applicationId to be defined');
   }
 
   function identifyUser(req, res) {
