@@ -1,6 +1,6 @@
 # Moesif Plugin for Express Gateway
 
-[Express Gateway](https://www.express-gateway.io/) is an open-source API Gateway/API Management applicance built on the Node.js [express](https://expressjs.com/) framework.
+[Express Gateway](https://www.express-gateway.io/) is an open-source API Gateway/API Management application built on the Node.js [express](https://expressjs.com/) framework.
 
 [Moesif](https://www.moesif.com) is the most advanced [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [debugging](https://www.moesif.com/features/api-debugging) platform. Moesif is used by thousands of developers to process billions of APIs calls.
 
@@ -25,8 +25,8 @@ This package is a plugin for Express Gateway to easily add Moesif's API analytic
       applicationId: your_moesif_application_id
   ```
 
-  Note, `your_moesif_application_id` is obtained from your Moesif account and is required to authenticate your app with Moesif.
-  
+  `your_moesif_application_id` is obtained from your Moesif account and is required.
+
   Other configuration options includes,
   - `debug`: turn on debug messages
   - `sessionTokenHeader`: Set the HTTP header key that contains your API's Authorization token/API key. Moesif tries to detect sessions automatically. However, if we cannot detect it correctly, you can specify which header field to use.
@@ -40,7 +40,7 @@ This package is a plugin for Express Gateway to easily add Moesif's API analytic
     - moesif
   ```
 
-- Add moesif policy to your pipelines.
+- Add moesif policy to your pipelines also in the `gateway.config.yml`.
   ```yml
 
   pipelines:
@@ -63,6 +63,6 @@ To capture all data for a pipeline, please make sure to put Moesif at the top of
 
 This plugin is a simple wrapper around the [moesif-express](https://www.moesif.com/docs/server-integration/express/) middleware.
 
-Since Express Gateway's configuration is designed to be declarative, some of the options from moesif-express that require a function are not ported over. We'll do so at future.
+Since Express Gateway's configuration is designed to be declarative, some of the options from moesif-express that require a function are not ported over. We'll do so in the future.
 
-If you need to use additional options, the easiest way is to fork this repo and  add your required options to the `middlewareCreator.js` file.
+In the mean time, if you need to use additional options, the easiest way is to fork this repo and add your required options to the `middlewareCreator.js` file.
