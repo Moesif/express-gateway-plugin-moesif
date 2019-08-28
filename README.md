@@ -2,7 +2,7 @@
 
 [Express Gateway](https://www.express-gateway.io/) is an open-source API Gateway/API Management application built on the Node.js [express](https://expressjs.com/) framework.
 
-[Moesif](https://www.moesif.com) is the most advanced [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [debugging](https://www.moesif.com/features/api-debugging) platform. Moesif is used by thousands of developers to process billions of APIs calls.
+[Moesif](https://www.moesif.com) is an [API analytics](https://www.moesif.com/features/api-analytics), [monitoring](https://www.moesif.com/features/api-monitoring) and [log analysis](https://www.moesif.com/features/api-debugging) platform. 
 
 This package is a plugin for Express Gateway to easily add Moesif's API analytics to your APIs served by Express Gateway.
 
@@ -22,10 +22,15 @@ This package is a plugin for Express Gateway to easily add Moesif's API analytic
     # express-gateway-plugin-example:
     #   param1: 'param from system.config'
     moesif:
-      applicationId: your_moesif_application_id
+      applicationId: 'Your Moesif Application Id'
   ```
 
-  `your_moesif_application_id` is obtained from your Moesif account and is required.
+Your Moesif Application Id can be found in the [_Moesif Portal_](https://www.moesif.com/).
+After signing up for a Moesif account, your Moesif Application Id will be displayed during the onboarding steps. 
+
+You can always find your Moesif Application Id at any time by logging 
+into the [_Moesif Portal_](https://www.moesif.com/), click on the top right menu,
+and then clicking _Installation_.
 
   Other configuration options includes,
   - `debug`: turn on debug messages
