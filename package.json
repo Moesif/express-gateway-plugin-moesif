@@ -1,6 +1,6 @@
 {
   "name": "express-gateway-plugin-moesif",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Moesif plugin for express gateway to enable API analytics",
   "main": "manifest.js",
   "scripts": {
@@ -13,11 +13,11 @@
     "express",
     "gateway"
   ],
-  "author": "xing@moesif.com",
+  "author": "support@moesif.com",
   "license": "Apache-2.0",
   "dependencies": {
     "content-type": "^1.0.4",
     "lodash": "^4.17.11",
-    "moesif-express": "^2.6.4"
+    "moesif-express": "^2.9.10"
   }
 }
